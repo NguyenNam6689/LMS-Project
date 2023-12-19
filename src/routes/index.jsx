@@ -4,7 +4,7 @@ import { Outlet, createBrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 //* IMPORT
-import LoginAdmin from '@/pages/login/Loginpage';
+import LoginAdmin from '@/pages/login/loginpage';
 import App from '@/App';
 import LoadingPage from '@/components/loadings/LoadingPage';
 import LayoutPage from '@/pages/layout';
