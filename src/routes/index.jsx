@@ -8,6 +8,7 @@ import LoginAdmin from '@/pages/login/loginpage';
 import App from '@/App';
 import LoadingPage from '@/components/loadings/LoadingPage';
 import LayoutPage from '@/pages/layout';
+git;
 import { store } from '@/redux/store';
 
 //* student
