@@ -21,6 +21,15 @@ import ListCourse from '@/pages/coures/ListCourse';
 import AddCourse from '@/pages/coures/AddCourse';
 import EditCourse from '@/pages/coures/EditCourse';
 
+//#class
+import ListClass from '@/pages/class/ListClass'
+import ListEnrrolls from '@/pages/class/Enrrolment'
+import ListLesson  from '@/pages/class/ListLesson'
+import AddClass from '@/pages/class/AddClass'
+import CheckInStudent  from '@/pages/class/CheckInStudent'
+
+
+
 const routes = [
   {
     path: '/',
@@ -79,7 +88,31 @@ const routes = [
       },
       {
         path: '/LopHoc',
-        element: <div></div>,
+        children : [
+          // trang danh sách Lớp Học
+          {
+            path: "/LopHoc/ListClass",
+            element: <ListClass/>,
+          },
+          {
+             path: "/LopHoc/Enrrolment/:CLASSID",
+             element: <ListEnrrolls/>,
+          },
+          {
+            path: "/LopHoc/ListLesson",
+            element: <ListLesson />,
+          },
+          {
+            path: "/LopHoc/AddClass",
+            element: <AddClass />,
+          },
+           // trang thêm Lớp Học
+           {
+            path: "/LopHoc/CheckInLession/:CLASSID",
+            element: < CheckInStudent  />
+          },
+          
+        ]
       },
       {
         path: '/Nhanvian',
