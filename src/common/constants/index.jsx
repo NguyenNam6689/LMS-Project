@@ -1,0 +1,1 @@
+export const _15_SECOND = 15 * 1000;
