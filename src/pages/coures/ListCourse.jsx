@@ -1,6 +1,10 @@
 //* LIB
 import { dataListCourse } from '@/data/course';
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
+=======
+import React from 'react';
+>>>>>>> c93f681a111134beff3230aee919eb1bceaf8dd3
 import { FaRegTrashAlt } from 'react-icons/fa';
 import { TfiWrite } from 'react-icons/tfi';
 
@@ -9,6 +13,7 @@ import { ATTRIBUTE_TABLE, HEADER_TABLE, NAME_TABLE } from '@/common/constants/Co
 import ContentName from '@/components/ContentName';
 import TableAction from '@/components/table/TableAction';
 import TableList from '@/components/table/TableList';
+<<<<<<< HEAD
 import ToolTip from '@/components/tooltip';
 import { useDispatch } from 'react-redux';
 import { getCourseInitial } from '@/redux/course/Thunk';
@@ -63,6 +68,26 @@ const ListCourse = () => {
                 <FaRegTrashAlt size={20} />
               </ToolTip>
             ),
+=======
+
+const ListCourse = () => {
+  return (
+    <React.Fragment>
+      <ContentName tableName={NAME_TABLE} />
+      <TableAction leftButton={[{ size: 'large', name: 'Thêm khoá học', color: '#561B8C' }]} />
+      <TableList
+        tableHeader={HEADER_TABLE}
+        tableAttribute={ATTRIBUTE_TABLE}
+        tableData={dataListCourse}
+        tableLeftButton={[
+          {
+            click: () => {},
+            icon: <TfiWrite size={20} />,
+          },
+          {
+            click: () => {},
+            icon: <FaRegTrashAlt size={20} />,
+>>>>>>> c93f681a111134beff3230aee919eb1bceaf8dd3
           },
         ]}
       />

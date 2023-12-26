@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //* LIB
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -6,6 +7,19 @@ import { RiKey2Fill } from 'react-icons/ri';
 
 //* IMPORT
 import { login } from '@/services/auth';
+=======
+import React from 'react';
+//#LIB
+import { useNavigate } from 'react-router-dom';
+
+//# icon
+import { RiUser3Fill } from 'react-icons/ri';
+import { RiKey2Fill } from 'react-icons/ri';
+
+//#
+import { login } from '@/services/auth';
+
+>>>>>>> c93f681a111134beff3230aee919eb1bceaf8dd3
 import logo from '@/assets/image/mainlogo.png';
 
 const LoginAdmin = () => {

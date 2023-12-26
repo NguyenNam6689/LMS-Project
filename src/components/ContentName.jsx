@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+import react from 'react';
+
+>>>>>>> c93f681a111134beff3230aee919eb1bceaf8dd3
 const ContentName = ({ tableName }) => {
   return (
     <>

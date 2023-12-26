@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 //* LIB
+=======
+// #LIB
+>>>>>>> c93f681a111134beff3230aee919eb1bceaf8dd3
 import * as React from 'react';
 import { styled, useTheme } from '@mui/material/styles';
 import Drawer from '@mui/material/Drawer';
@@ -9,7 +13,11 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { Link, useLocation } from 'react-router-dom';
 import { MdLogout } from 'react-icons/md';
 
+<<<<<<< HEAD
 //* IMPORT
+=======
+//#COMP
+>>>>>>> c93f681a111134beff3230aee919eb1bceaf8dd3
 import SiderbarItem from '@/components/sidebar/SideBarItem';
 
 const DrawerHeader = styled('div')(({ theme }) => ({

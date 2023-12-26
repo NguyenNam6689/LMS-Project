@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 //* LIB
+=======
+>>>>>>> c93f681a111134beff3230aee919eb1bceaf8dd3
 import { MdOutlineWindow } from 'react-icons/md';
 import { MdOutlineClass } from 'react-icons/md';
 import { FaChalkboardTeacher } from 'react-icons/fa';
