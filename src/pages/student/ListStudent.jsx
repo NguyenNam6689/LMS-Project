@@ -1,33 +1,26 @@
-<<<<<<< HEAD
 //* LIB
-import React, { useEffect } from "react";
-import { TfiWrite } from "react-icons/tfi";
-import { FaRegTrashAlt } from "react-icons/fa";
-import ToolTip from "@/components/tooltip";
-import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { getListStudent, deleteStudent} from "@/redux/student/Thunk";
-import useGetListStudent from "@/hooks/redux/useSelectorStudent";
+import React, { useEffect } from 'react';
+import { TfiWrite } from 'react-icons/tfi';
+import { FaRegTrashAlt } from 'react-icons/fa';
+import ToolTip from '@/components/tooltip';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { getListStudent, deleteStudent } from '@/redux/student/Thunk';
+import useGetListStudent from '@/hooks/redux/useSelectorStudent';
 import toast, { Toaster } from 'react-hot-toast';
 //* IMPORT
-import {
-  NAME_TABLE,
-  HADER_TABLE,
-  ATTRIBUTE_TABLE,
-} from "@/common/constants/StudentConst";
-import TableList from "@/components/table/TableList";
-import ContentName from "@/components/ContentName";
-import TableAction from "@/components/table/TableAction";
-import SkeletonTable from "@/components/skeleton/SkeletonTable";
-import PopupDelete from "@/components/popup/PopupDelete";
+import { NAME_TABLE, HADER_TABLE, ATTRIBUTE_TABLE } from '@/common/constants/StudentConst';
+import TableList from '@/components/table/TableList';
+import ContentName from '@/components/ContentName';
+import TableAction from '@/components/table/TableAction';
+import SkeletonTable from '@/components/skeleton/SkeletonTable';
+import PopupDelete from '@/components/popup/PopupDelete';
 
 const ListStudent = () => {
-
   const dispatch = useDispatch();
   const state = useGetListStudent();
   const navigate = useNavigate();
-  const [deleteObject, setDeleteObject] = React.useState({ object: "" });
-  
+  const [deleteObject, setDeleteObject] = React.useState({ object: '' });
 
   const deleteSt = (object) => {
     setDeleteObject((prev) => ({
@@ -43,16 +36,16 @@ const ListStudent = () => {
   return (
     <React.Fragment>
       <ContentName tableName={NAME_TABLE} />
-       {state.isLoading ? (
+      {state.isLoading ? (
         <SkeletonTable />
       ) : (
         <React.Fragment>
           <TableAction
             leftButton={[
               {
-                size: "large",
-                name: "Thêm Học Sinh",
-                color: "#561B8C",
+                size: 'large',
+                name: 'Thêm Học Sinh',
+                color: '#561B8C',
                 click: () => {
                   navigate(`AddStudent`);
                 },
@@ -72,7 +65,7 @@ const ListStudent = () => {
                   navigate(`EditStudent/${object.id}`);
                 },
                 icon: (
-                  <ToolTip tooltip={"Chỉnh sửa"}>
+                  <ToolTip tooltip={'Chỉnh sửa'}>
                     <TfiWrite size={20} />
                   </ToolTip>
                 ),
@@ -82,7 +75,7 @@ const ListStudent = () => {
                   deleteSt(object);
                 },
                 icon: (
-                  <ToolTip tooltip={"Xoá"}>
+                  <ToolTip tooltip={'Xoá'}>
                     <FaRegTrashAlt size={20} />
                   </ToolTip>
                 ),
@@ -94,57 +87,11 @@ const ListStudent = () => {
 
       <PopupDelete
         setdeleteObject={setDeleteObject}
-        content={"Bạn có chắc chắnn muốn xóa "}
+        content={'Bạn có chắc chắnn muốn xóa '}
         object={deleteObject.object.student_name}
-        clickDelete = {  deleteStudent(deleteObject.object.id) }
+        clickDelete={deleteStudent(deleteObject.object.id)}
       />
-         <Toaster />
-=======
-//#LIB
-import react from 'react';
-
-//#raw data
-import { rawDataListStudent } from '@/data/student';
-
-//# CONST student
-import { NAME_TABLE, HADER_TABLE, ATTRIBUTE_TABLE } from '@/common/constants/StudentConst';
-
-import TableList from '@/components/table/TableList';
-import ContentName from '@/components/ContentName';
-import TableAction from '@/components/table/TableAction';
-import React from 'react';
-
-//#Icon
-import { TfiWrite } from 'react-icons/tfi';
-import { FaRegTrashAlt } from 'react-icons/fa';
-import { TbExchange } from 'react-icons/tb';
-
-const ListStudent = () => {
-  return (
-    <React.Fragment>
-      <ContentName tableName={NAME_TABLE} />
-      <TableAction
-        leftButton={[{ size: 'large', name: 'Thêm Học Sinh', color: '#561B8C', click: () => {} }]}
-      />
-      <TableList
-        // các trường của table
-        tableHeader={HADER_TABLE}
-        // dữ liệu table
-        tableData={rawDataListStudent}
-        tableAttribute={ATTRIBUTE_TABLE}
-        // các nút thao tác cho  mổi dòng trong table
-        tableLeftButton={[
-          {
-            click: () => {},
-            icon: <TfiWrite size={20} />,
-          },
-          {
-            click: () => {},
-            icon: <FaRegTrashAlt size={20} />,
-          },
-        ]}
-      />
->>>>>>> c93f681a111134beff3230aee919eb1bceaf8dd3
+      <Toaster />
     </React.Fragment>
   );
 };

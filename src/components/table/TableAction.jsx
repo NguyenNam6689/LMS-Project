@@ -12,10 +12,7 @@ const TableAction = ({ leftButton, rightAction }) => {
               className="!ml-[10px]"
               sx={{ background: `${item.color} `, color: '#EBC901' }}
               size={item.size}
-<<<<<<< HEAD
               onClick={item.click}
-=======
->>>>>>> c93f681a111134beff3230aee919eb1bceaf8dd3
             >
               {item.name}
             </Button>

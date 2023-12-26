@@ -6,7 +6,6 @@ import ContentName from '@/components/ContentName';
 import Form from '@/components/Form';
 import CoverFrom from '@/components/CoverForm';
 import FiledInput from '@/components/Filedinput';
-<<<<<<< HEAD
 import { ValidateIsempty } from '@/common/utils';
 import { Toaster } from 'react-hot-toast';
 import { useDispatch } from 'react-redux';
@@ -73,15 +72,10 @@ const AddStudent = () => {
     }
   };
 
-=======
-
-const Addstudent = () => {
->>>>>>> c93f681a111134beff3230aee919eb1bceaf8dd3
   return (
     <React.Fragment>
       <CoverFrom>
         <ContentName tableName={'Thêm Học Sinh'} />
-<<<<<<< HEAD
         <Form clickSave={handleAdd}>
           <FiledInput
             error={notify[0]}
@@ -157,32 +151,8 @@ const Addstudent = () => {
         </Form>
       </CoverFrom>
       <Toaster />
-=======
-        <Form>
-          <FiledInput lable={'ID'} placeholder={'ID hoc sinh'} typeField={'input'} />
-          <FiledInput lable={'Tên Học Sinh'} placeholder={'Nguễn văn a'} typeField={'input'} />
-          <FiledInput lable={'Năm Sinh'} placeholder={'09/09/3000'} typeField={'input'} />
-          <FiledInput lable={'Lớp'} placeholder={'Scratch'} typeField={'input'} />
-          <FiledInput
-            lable={'Số diện thoại Học Sinh'}
-            placeholder={'04342****'}
-            typeField={'input'}
-          />
-          <FiledInput lable={'Tên Phụ Huynh'} placeholder={'Nguễn văn a'} typeField={'input'} />
-          <FiledInput
-            lable={'Số diện thoại Phụ Huynh'}
-            placeholder={'04342****'}
-            typeField={'input'}
-          />
-        </Form>
-      </CoverFrom>
->>>>>>> c93f681a111134beff3230aee919eb1bceaf8dd3
     </React.Fragment>
   );
 };
 
-<<<<<<< HEAD
 export default AddStudent;
-=======
-export default Addstudent;
->>>>>>> c93f681a111134beff3230aee919eb1bceaf8dd3
